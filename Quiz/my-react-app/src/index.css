@@ -1,0 +1,121 @@
+:root {
+  --primary: #150080;
+  --accent: #d08642;
+  --bg: #ffffff;
+  --bg-accent: #e7e8e9;
+  --disabled: #9c9c9c;
+  --foreground: #2d264b;
+}
+
+body {
+  font-family: monospace;
+  background: linear-gradient(0deg, var(--primary) 0.03%, var(--accent));
+  color: var(--foreground);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 100vh;
+}
+
+.quiz-container {
+  width: 500px;
+  background: var(--bg);
+  border-radius: 4px;
+  margin-top: 100px;
+  padding: 30px 60px;
+  box-sizing: border-box;
+}
+
+.quiz-container .active-question-no {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.quiz-container .total-question {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--disabled);
+}
+
+.quiz-container h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.quiz-container ul {
+  margin-top: 20px;
+  margin-left: -40px;
+}
+
+.quiz-container ul li {
+  text-decoration: none;
+  list-style: none;
+  color: var(--foreground);
+  font-size: 16px;
+  background: var(--bg);
+  border: 1px solid var(--disabled);
+  border-radius: 16px;
+  padding: 11px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.quiz-container ul li span {
+  cursor: pointer;
+}
+
+.quiz-container ul li .feedback {
+  font-size: 14px;
+  color: #fff;
+  background-color: #333;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.quiz-container ul li .specific-feedback {
+  font-size: 14px;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.quiz-container ul li.selected-answer {
+  background: var(--primary);
+  border: 1px solid var(--accent);
+  color: var(--bg);
+}
+
+.quiz-container ul li.correct-answer {
+  background-color: lightgreen;
+}
+
+.quiz-container ul li.wrong-answer {
+  background-color: lightcoral;
+}
+
+.quiz-container .footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quiz-container button {
+  background: linear-gradient(0deg, var(--primary) 0.03%, var(--accent));
+  border-radius: 9px;
+  font-size: 18px;
+  color: var(--bg);
+  padding: 10px 42px;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.quiz-container button:disabled {
+  background: var(--accent);
+  color: var(--disabled);
+  cursor: not-allowed;
+}
